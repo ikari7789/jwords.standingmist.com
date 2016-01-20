@@ -14,12 +14,13 @@
                                 <span>{{ $word->word }}</span>
                                 <div>
                                     <span>Categories:</span>
+                                    <ul>
                                     @forelse ($word->categories as $category)
-                                        <span>Category:</span>
-                                        <span>{{ $category->name }}</span>
+                                        <li><a href="{{ url("/category/{$category->id}") }}">{{ $category->name }}</a></li>
                                     @empty
-                                        <span>No categories.</span>
+                                        <li>No categories.</li>
                                     @endforelse
+                                    </ul>
                                 </div>
                             </div>
                         @else
