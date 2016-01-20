@@ -28,6 +28,6 @@ class CreateCategoryWordTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories_words');
+        Schema::drop('category_word');
     }
 }
