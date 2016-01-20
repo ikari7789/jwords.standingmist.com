@@ -16,7 +16,7 @@ class CategoryWordSeeder extends Seeder
         $words = Word::all();
         $categories = Category::all();
         foreach ($words as $word) {
-            $categoryIndex = mt_rand(0, count($categories));
+            $categoryIndex = mt_rand(0, count($categories) - 1);
             $word->categories()->save($categories[$categoryIndex]);
         }
     }
